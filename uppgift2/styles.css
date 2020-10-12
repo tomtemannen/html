@@ -1,0 +1,120 @@
+.header {
+    background-color: #81a06f;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(187, 187, 187, 0.2);
+}
+.dropButton {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropDown:hover .dropdown-content {
+    display: block;
+}
+
+.dropDown:hover .dropButton {
+    background-color: #000000;
+    color: white;
+}
+
+.column {
+    float: left;
+    width: 31%;
+    padding: 15px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h1{
+    color: maroon;
+}
+
+h2{
+    text-align: center;
+    color: rgb(52, 36, 196);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#kolumn2 {
+    
+    padding: 10px;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+  }
+
+.polaroid {
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+p{
+    color: rgb(170, 14, 105);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.knappEn {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+  .knappEn2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+  
+  .knappEn2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+
+.footer {
+    background-color: #380a83;
+    text-align: center;
+    padding: 10px;
+  }
