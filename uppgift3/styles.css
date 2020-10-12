@@ -1,0 +1,71 @@
+
+body, html {height: 100%;}
+
+@media screen and (min-width: 800px) {
+    .device {
+      background-color: rgb(199, 223, 168);
+      height: 100%;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .device {
+      background-color: rgb(16, 57, 133);
+      height: 100%;
+    }
+  }
+
+@media screen and (max-width: 400px) {
+    .device {
+      background-color: rgb(87, 151, 103);
+      height: 100%;
+    }
+  }
+.bg {
+    background-image: url("image/rotimage/logo.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+img {
+    max-width: 50%;
+    height: auto;
+  }
+
+.container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+.flex-item {
+    color: tomato;
+    background-color: violet;
+    height: 50px;
+    width: 200px;
+    margin: 5px;
+    font-size: 30px;
+    list-style: none;
+}  
+
+.buyList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flexBuy {
+    color: tomato;
+    background-color: violet;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    font-size: 10px;
+    list-style: none;
+}  
+@media screen and (max-width: 600px) {
+.buyList{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+}
