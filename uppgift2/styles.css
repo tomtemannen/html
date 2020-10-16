@@ -1,19 +1,68 @@
-.header {
-    background-color: #81a06f;
-    padding: 20px;
-    text-align: center;
+.item1 { grid-area: header;
+        justify-self: center; } /* översta delen på sidan, centrerad */
+.item2 { grid-area: menu; 
+        background-color: rgb(139, 196, 223); /*Bakgrundsfärg i griden*/
+        grid-row: 2/4; /*bestämt var i griden classen ska vara*/
+        box-shadow: -3px 3px 5px rgb(190, 190, 190); /*skugga för stetiska skäl*/
+        border-width: 2px; /*satt borderstorleken till 2 px*/
+        border-right: outset; /*border till höger*/
+        border-top: outset /*border på toppen*/
 }
+.item3 { grid-area: main; 
+  margin: 20px;
+  justify-self: center;
+}
+.item4 { grid-area: right; 
+  }
+.item5 { grid-area: footer; 
+  background-color: #380a83; 
+  background-image: linear-gradient(to right, rgb(139, 196, 223) , rgb(255, 255, 255)); /*gradvis förskjutning av två färger*/
+  box-shadow: 3px 3px 5px rgb(190, 190, 190);
+  border-top: outset;
+  border-left: outset;
+  margin-left: 10px; /*förskjutning till vänsterliggande grid-ruta*/
+}
+/*.item6 { grid-area: menu; 
+    background-color: rgb(139, 196, 223);
+    grid-row: 3/4;
+    box-shadow: -3px 3px 5px rgb(190, 190, 190);
+  }*/
+.item7 { grid-area: header;
+  grid-column: 1/2; /*positionering i griden*/
+  background-color: rgb(139, 196, 223);
+  border-radius: 100px 0px 0px 0px; /*rundat kanten uppe till vänster*/
+  box-shadow: -3px -3px 5px rgb(190, 190, 190);
+  border-right: outset;
+  border-bottom: outset;
+  margin-bottom: 10px;
+  position: relative; /*satt positionering i grid-rutan*/
+}
+.grid-container {
+    display: grid; /* uppställning av grid, enkelt att se layaouten i matris */
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main main right'
+      'menu footer footer footer footer footer';
+    /*grid-gap: 10px;*/ /* tagit bort gapet mellan grid-rutorna */
+    background-color: #ffffff; /* bakgrundsfärg i alla rutor */
+    padding: 10px;
+    width: 80%; /* satt bredden till 80% för att sidan inte ska täcka hela skärmen, endast för jag tycker det var snyggare */
+    margin: auto; /* gör att griden blir centrerad */
+    
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    font-size: 15px;
+  } /* Ger alla divar inom griden standardvärden */
 
-body {
-    margin: 0;
-    background-color: rgb(187, 187, 187, 0.2);
-}
 .dropButton {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+    background-color: #ffffff; /*bakgrudsfärg på dropdown-menyn i "viloläge"*/
+    color: rgb(0, 0, 0); /*färg på texten på menyn*/
+    padding: 16px; /*storlek på bakgrundsfärgen, "knappen"*/
+    font-size: 15px; /*Storlek på texten*/
+    border: none; /*onödig, men ligger här för om man vill lägga till en kant och testa lite*/
 }
 .dropDown {
     position: relative;
@@ -21,24 +70,25 @@ body {
 }
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    position: absolute; /*positionen satt för att menyn går över sakerna som ligger nedanför istället för att förskjutas*/
+    background-color: #f1f1f1; /*färg på bakgrunden på länkarna som kommer fram*/
+    min-width: 160px; /*storlek på menyn som kommer fram*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: rgb(0, 0, 0); /*Färg på länktexten i droppdownmenyn*/
+    padding: 12px 16px; /*förskjutning av länktexten (upp/ner och höger/vänster)*/
     text-decoration: none;
-    display: block;
+    display: block; /*för att kräva att länkarna hamnar under varandra*/
 }
+
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #ddd; /*färg på bakgrunden när musen är över*/
 }
 
 .dropDown:hover .dropdown-content {
-    display: block;
+    display: block;  /*för att kräva att länkarna hamnar under varandra*/
 }
 
 .dropDown:hover .dropButton {
@@ -46,75 +96,71 @@ body {
     color: white;
 }
 
-.column {
-    float: left;
-    width: 31%;
-    padding: 15px;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 h1{
-    color: maroon;
+    color: rgb(29, 29, 29); /*färg på text i alla h1-taggar*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*typsnitt i alla h1-tagar*/
+    font-size: 50px; /*Storlek på texten i alla h1-tagar*/
+    text-shadow: 2px 2px 8px #616161; /*Skugga på all text i h1-tagar*/
 }
 
 h2{
-    text-align: center;
-    color: rgb(52, 36, 196);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center; /*centrerar texten inom alla h2-tagar*/
+    color: rgb(0, 0, 0); /*färg på text i alla h2-tagar*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*typsnitt på alla text i h2-tagar*/
+    font-size: 15px; /*storlek på text i alla h2-tagar*/
 }
-#kolumn2 {
-    
-    padding: 10px;
-    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
-  }
-
+h3{
+    text-align: center; /*centrerar text i alla h3-tagar*/
+    color: rgb(0, 0, 0); /*färg på texten i alla h3-tagar*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /*typsnitt på texten i alla h3-tagar*/
+    font-size: 45px; /*storlek på texten i alla h3-tagar*/
+}
 .polaroid {
-  width: 90%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+  margin: auto; /*centrerar horizontelt*/
+  width: 80%; /*storlek på classen*/
+  background-color: white; /*bakgrundsfärgen*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*skugga på*/
+  margin-bottom: 25px; /*marginal från botten*/
 }
 
 .container {
-  text-align: center;
-  padding: 10px 20px;
+  text-align: center; /*centrerar*/
+  padding: 10px 20px; /*förkjutning åt alla kanter*/
 }
 
 p{
-    color: rgb(170, 14, 105);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0); /*färg på texten i p-tagar*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*typsnitt på text i p-tagar*/
+    font-size: 15px; /*storlek på text i p-tagar*/
 }
 .knappEn {
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
+    border: 2px solid rgba(0, 0, 0, 0.5); /*färg på kant, med transparans*/
+    border-radius: 20px; /*rundat kanterna på bordern*/
+    color: white; /**/
+    padding: 16px 32px; /*padding för att bestämma storlek på knappen*/
+    text-align: center; /*text i mitten av knappen*/
+    text-decoration: none; /*dekoration på texten*/
+    /*display: inline-block;*/
+    font-size: 16px; /*storlek på text*/
+    /*margin: 4px 2px;*/
+    transition-duration: 0.4s; /*övergångstid från ena färgen till den andra när musen dras över*/
     cursor: pointer;
 }
   
   .knappEn2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white; /*bakgrundsfärg på knappen i viloläge*/
+    color: black; /*färg på text i viloläge*/
+    /*border: 2px solid rgba(0, 0, 0, 0.5);*/
 }
   
   .knappEn2:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /*färg på knapp när musen är över*/
+    color: white; /*färg på text när musen är över*/
 }
   
 
-.footer {
+/*.footer {
     background-color: #380a83;
     text-align: center;
     padding: 10px;
-  }
+  }*/
