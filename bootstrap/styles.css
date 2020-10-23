@@ -1,0 +1,18 @@
+.btn {
+    background-color: brown ;
+    color: darkblue !important;
+}
+
+.btn-secondary {
+    /*background-color: rgb(84, 196, 56);*/
+    color: darkblue !important;
+}
+.dropdown-menu {
+    background-color: rgb(221, 187, 34) !important;
+    color: darkblue !important;
+}
+.btn-secondary:hover {background-color: rgb(221, 187, 34);}
+/*.dropdown-toggle {
+    background-color: rgb(63, 32, 121) ;
+    color: darkblue ;
+}*/
